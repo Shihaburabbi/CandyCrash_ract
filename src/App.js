@@ -24,6 +24,7 @@ const App = () => {
         columnOfFour.forEach(
           (square) => (currentColorArrangement[square] = "")
         );
+        return true;
       }
     }
   };
@@ -45,6 +46,7 @@ const App = () => {
         )
       ) {
         rowOfFour.forEach((square) => (currentColorArrangement[square] = ""));
+        return true;
       }
     }
   };
@@ -62,6 +64,7 @@ const App = () => {
         columnOfThree.forEach(
           (square) => (currentColorArrangement[square] = "")
         );
+        return true;
       }
     }
   };
@@ -82,6 +85,7 @@ const App = () => {
         )
       ) {
         rowOfThree.forEach((square) => (currentColorArrangement[square] = ""));
+        return true;
       }
     }
   };
@@ -129,6 +133,15 @@ const App = () => {
 
     console.log("squareBeingReplacedId", squareBeingReplacedId);
     console.log("squareBeingDraggedId", squareBeingDraggedId);
+
+    const validMoves = [
+      squareBeingDraggedId - 1,
+      squareBeingDraggedId - width,
+      squareBeingDraggedId + 1,
+      squareBeingDraggedId + width,
+    ];
+
+    const validMove = validMoves.includes(squareBeingReplacedId);
   };
 
   const createBoard = () => {
