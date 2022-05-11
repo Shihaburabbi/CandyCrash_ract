@@ -16,3 +16,9 @@
 width: 70px;
 height: 70px;
 }
+
+.score-board{
+  position: absolute;
+  left: 600px;
+  /* text-align: center; */
+}
